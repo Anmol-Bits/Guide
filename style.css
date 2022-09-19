@@ -5,6 +5,7 @@
 body {
     background-image: url("/main-bg.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
     margin: auto;
     color: aqua;
 }
@@ -34,7 +35,6 @@ body {
     width: 50%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter:blur(10px);
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -201,20 +201,13 @@ input[type=range] {
     }
 }
 
-@media only screen and (max-width: 435px){
+@media only screen and (max-width: 500px){
     .btn{
         margin: 50px auto 0px auto;
     }
-    /* #map-container{
-        margin-top: 0;
-        margin-bottom: 50px;
-    } */
     #range-flex{
         margin-bottom: 30px;
     }
-}
-
-@media only screen and (max-width: 360px){
     .inp{
         margin:20px 0px;
         padding: 10px 5px;
