@@ -5,8 +5,10 @@
 }
 
 #bg {
-    background-image: url("/main-bg.jpg");
+    background-image: url("/background-img.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     margin: auto;
     color: aqua;
 }
