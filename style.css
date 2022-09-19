@@ -5,7 +5,6 @@
 body {
     background-image: url("/main-bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     margin: auto;
     color: aqua;
 }
