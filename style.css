@@ -4,7 +4,7 @@
     font-family: poppins, sans-serif;
 }
 
-body {
+#bg {
     background-image: url("/main-bg.jpg");
     background-repeat: no-repeat;
     margin: auto;
