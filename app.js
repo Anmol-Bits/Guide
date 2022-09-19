@@ -1,64 +1,3 @@
-// let source, destination, map;
-// function initMap() {
-
-//     // source Prediction autcomplete
-//     source = new google.maps.places.Autocomplete(document.getElementById("from"));
-//     // source Prediction autcomplete
-
-
-//     // destination Prediction autcomplete
-//     destination = new google.maps.places.Autocomplete(document.getElementById("to"));
-//     // destination Prediction autcomplete
-
-
-//     // map visual & coordinates
-//     var cord = { lat: -34.397, lng: 150.644 }
-//     var mapOption = {
-//         center: cord,
-//         zoom: 7,
-//         mapTypeId: google.maps.MapTypeId.ROADMAP
-//     };
-//     // map visual & coordinates
-
-
-//     // show map
-//     var map = new google.maps.Map(document.getElementById('map-container'), mapOption);
-//     // show map
-
-
-//     // route map
-//     var directionsService = new google.maps.DirectionsService();
-//     // route map 
-
-
-//     // direction render
-//     var directionsDisplay = new google.maps.DirectionsRenderer();
-//     // direction render
-
-
-//     directionsDisplay.setMap(map);
-
-//     // function
-//     function calcRoute() {
-//         var request = {
-//             origin: document.getElementById("from").value,
-//             destination: document.getElementById("to").value,
-//             travelMode: google.maps.TravelMode.DRIVING,
-//             unitSystem: google.maps.UnitSystem.IMPERIAL
-//         };
-
-//         directionsService.route(request, (result, status) => {
-//             if (status == google.maps.DirecttionsStatus.OK)
-//                 directionDisplay.setDirections(result);
-
-//             else {
-//                 directionDisplay.setDirections({ routes: [] });
-//                 map.setCenter(cord)
-//             }
-//         })
-
-//     }
-// }
 
 var directionsService, directionsRenderer;
 function initMap() {
@@ -101,6 +40,7 @@ function calcRoute() {
 
 
     if (start!="" && end != ""){
+    document.getElementById("bg").style.backgroundSize = "cover";
     document.getElementById("wrap").style.width = "100%";
     document.getElementById("wrap").style.gridTemplateColumns = "1fr 1fr";
     document.getElementById("map-container").style.display = "inline-block";
