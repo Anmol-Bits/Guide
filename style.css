@@ -36,7 +36,7 @@
     width: 50%;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);    
+    -webkit-backdrop-filter: blur(10px);
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -101,7 +101,7 @@
     background-color: cyan;
 }
 
-.btn:hover {
+.btn:focus {
     box-shadow: 0px 0px 10px cyan;
     background-color: cyan;
     color: #333333;
@@ -140,9 +140,6 @@ input[type=range] {
     transition: all 250ms ease;
 }
 
-.flex-inside-container:hover {
-    box-shadow: 0px 0px 10px #666666;
-}
 #range-flex {
     display: flex;
     flex-direction: row;
@@ -150,13 +147,14 @@ input[type=range] {
     justify-content: center;
     align-items: center;
 }
+
 .range {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width:auto;
+    width: auto;
 }
 
 #cars {
@@ -197,32 +195,42 @@ input[type=range] {
         grid-template-columns: 1fr !important;
     }
 
-
-
     #map-container {
         grid-column: 1/span 3;
     }
 }
 
-@media only screen and (max-width: 500px){
-    .btn{
+@media only screen and (min-width: 500px) {
+    .flex-inside-container:hover {
+        box-shadow: 0px 0px 10px #666666;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .btn {
         margin: 50px auto 0px auto;
     }
-    #wrap{
+
+    #wrap {
         width: 100%;
     }
-    #range-flex{
+
+    #range-flex {
         margin-bottom: 30px;
     }
-    .inp{
-        margin:20px 0px;
+
+    .inp {
+        margin: 20px 0px;
         padding: 10px 5px;
     }
-    #logo img{
+
+    #logo img {
         margin: auto;
         width: 70%;
     }
-    #map-container{
+
+    #map-container {
         height: 250px;
     }
 }
