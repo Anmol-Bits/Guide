@@ -10,9 +10,31 @@
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqqgZ6rqUQ1Idtj_RJNGQ0mZC9Z5nD3RY&libraries=places&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBU4aXP4_T68aaORxSXWYLNrUnsumEafPU&libraries=places&callback=initMap"
         async defer></script>
 
+
+        <!-- AIzaSyBqqgZ6rqUQ1Idtj_RJNGQ0mZC9Z5nD3RY -->
+
+        <!-- AIzaSyBU4aXP4_T68aaORxSXWYLNrUnsumEafPU -->
+
+    <style>
+        .select {
+            margin-top: 30px;
+            outline: none;
+            width: 60%;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            line-height: 1.1;
+            font-weight: 500;
+        }
+
+        .select option {
+            font-weight: 500;
+        }
+    </style>
 </head>
 
 <body id="bg">
@@ -32,9 +54,9 @@
             </div>
             <div id="map-container"></div>
             <div id="choose-cat">
-                <label for="sedan">
+                <label for="sedan" onclick="sedan()">
                     <h3>Sedan</h3>
-                </label> <input name="car" id="sedan" class="car-select" type="radio" checked>
+                </label> <input name="car" id="sedan" class="car-select" type="radio">
                 <label for="suv">
                     <h3>Suv</h3>
                 </label> <input name="car" id="suv" class="car-select" type="radio">
@@ -43,11 +65,7 @@
                 <div id="range-flex">
                     <div class="range">
                         <h3>Rs. / Km : <span id="perkm_value">10</span></h3>
-                        <input type="range" id="km" min="10" max="40" step="5" value="10" onchange="km_change()">
-                    </div>
-                    <div class="range" >
-                        <h3>Total Person : <span id="person_value">1</span></h3>
-                        <input type="range" id="persons" min="1" max="7" step="1" value="1" onchange="person_change()">
+                        <input type="range" id="km" min="10" max="40" step="10" value="10" onchange="km_change()">
                     </div>
                 </div>
                 <div id="details">
@@ -55,6 +73,13 @@
                     <h3> Time <span id="time"></span></h3>
                     <h3> Estimated Fare <span id="fare"></span></h3>
                 </div>
+
+                <select class="select">
+                    <option>Swift Dezire</option>
+                    <option>i10</option>
+                    <option>WagonR</option>
+                    <option>Verna</option>
+                </select>
 
                 <button class="btn">BOOK CAB</button>
 
